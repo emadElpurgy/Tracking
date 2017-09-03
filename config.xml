@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="e.g.com.egcan.Tracking" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>mayor</name>
+    <description>
+        Mayor Shipping Tracking Application.
+    </description>
+    <author email="info@egcan.com" href="http://egcan.com">
+        Egyptian Canadian solution Provider
+    </author>
+	<platform name="ios" />
+	<platform name="android" />
+	<platform name="winphone">
+	<icon src="icon.png" width="180" height="180" />
+	</platform>
+    <access origin="*" />
+</widget>

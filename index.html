@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=411, initial-scale=1.0">
+  <meta name="description" content="Weather App for UD811">
+  <title>Track A Shipment</title>
+  <link rel="stylesheet" href="css/ud811.css" type="text/css"/>
+  <!-- manifest and meta theme color -->
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#2F3BA2">
+  <!-- Add to home screen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Track A Shipment">
+</head>
+<body>
+        <script type="text/javascript" src="cordova.js"></script>
+  <header class="header">
+    <h1 class="header__title">Track A Shipment</h1>
+    <button id="butRefresh" class="headerButton" aria-label="Refresh"></button>
+    <button id="butAdd" class="headerButton" aria-label="Add"></button>
+  </header>
+
+  <main class="main">
+
+    <div class="card cardTemplateShipment Shipment-Tracking" >
+      <div class="TrackingCode"></div>
+      <div class="date" data-dt="0"></div>
+      <div class="description"></div>
+      <div class="current">
+        <div class="visual">
+          <div class="icon state-2"></div>
+        </div>
+        <div class="description">
+          <div class="TrackingNumber"></div>
+          <div class="departureDate"></div>
+          <div class="vessel"></div>          
+          <div class="portOfLoad"></div>
+		  <div class="portOfDischarge"></div>
+          <div class="transhipment"></div>
+        </div>
+      </div>
+      	  <div class="contents" hidden></div>
+      </div>
+    </div>
+
+
+    <div class="card cardTemplate Shipment-Tracking" hidden>
+      <div class="TrackingCode"></div>
+      <div class="date" data-dt="0"></div>
+      <div class="description"></div>
+      <div class="current">
+        <div class="visual">
+          <div class="icon"></div>
+        </div>
+        <div class="description">
+          <div class="TrackingNumber"></div>
+          <div class="finalPOD"></div>
+          <div class="shippedTo"></div>          
+          <div class="CurState"></div>
+        </div>
+      </div>
+          <div class="size">
+            <span class="value"></span><span class="scale">FT</span>
+          </div>
+
+	  <div class="log" hidden>
+			<table border="1" width="100%" cellspacing="0px" class="mainlog_table">
+					<tr>
+						<td class="loghead_date">Date</td>
+						<td class="loghead_location">Location</td>
+						<td class="loghead_state">State</td>
+						<td class="loghead_vessel">Vessel</td>
+						<td class="loghead_voyage">Voyage</td>
+					</tr><tbody  class="action_table actionTemplate" hidden="yes">
+					<tr>
+						<td class="log_date">00/00/0000</td>
+						<td class="log_location">XXXXXXXXXXXX</td>
+						<td class="log_state">xxxxxxxxxxxxxx</td>
+						<td width="60%" class="log_vessel">xxxxxxxxxxxxxx</td>
+						<td width="60%" class="log_voyage">xxxxxxxxxxxxxx</td>
+					</tr>
+				</tbody></table>
+	  </div>
+      </div>
+    </div>
+
+    
+  </main>
+
+  <div class="dialog-container">
+    <div class="dialog">
+      <div class="dialog-title">Insert Tracking Number</div>
+      <div class="dialog-body"><input type="text" id="TrackingNumber"></div>
+      <div class="dialog-buttons">
+        <button id="butAddCode" class="button">Add</button>
+        <button id="butAddCancel" class="button">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="loader">
+    <svg viewBox="0 0 32 32" width="32" height="32">
+      <circle id="ud811Spinner" cx="16" cy="16" r="14" fill="none"></circle>
+    </svg>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+</html>
