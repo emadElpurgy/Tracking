@@ -47,7 +47,7 @@ var dateObj = new Date();
     }
   };
 
-  var TrackingAPIUrlBase = 'http://ecsp-st3/mayor/tracking.php?tracknumber=';
+  var TrackingAPIUrlBase = 'http://egcan.com/SmartBusiness/tracking.php?tracknumber=';
 
   var app = {
     isLoading: true,
